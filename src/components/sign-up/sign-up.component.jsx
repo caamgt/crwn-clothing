@@ -18,7 +18,7 @@ class SignUp extends Component {
     handleSubmit = async event => {
         event.preventDefault();
         const {displayName, email, password, confirmPassword} = this.state;
-        if (password != confirmPassword) {
+        if (password !== confirmPassword) {
             alert('Las contraseña no coinciden');
             return;
         }
@@ -64,6 +64,7 @@ class SignUp extends Component {
                         onChange={this.handleChange}
                         label='Email'
                         required
+                        autoComplete='username'
                     />
                     <FormInput
                         type='password'
@@ -72,6 +73,7 @@ class SignUp extends Component {
                         onChange={this.handleChange}
                         label='Password'
                         required
+                        autoComplete='current-password'
                     />
                     <FormInput
                         type='password'
@@ -80,6 +82,7 @@ class SignUp extends Component {
                         onChange={this.handleChange}
                         label='Confirm Password'
                         required
+                        autoComplete='new-password'
                     />
                     <CustomButton type='submit'>SIGN UP</CustomButton>
                 </form>

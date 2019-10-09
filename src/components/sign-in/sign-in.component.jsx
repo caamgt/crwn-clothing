@@ -42,6 +42,7 @@ class SignIn extends Component {
                         handleChange={this.handleChange}
                         required 
                         label='email'
+                        autoComplete='username'
                     />
                     <FormInput 
                         name='password' 
@@ -50,6 +51,7 @@ class SignIn extends Component {
                         handleChange={this.handleChange}
                         required
                         label='password'
+                        autoComplete='current-password'
                     />
                     <div className='buttons'>
                         <CustomButton type='submit'>Sign in</CustomButton>
